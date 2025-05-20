@@ -42,4 +42,4 @@ Adaptación del diseño para que sea responsive y accesible en distintas pantall
 🧠 Objetivo
 Crear una plataforma web que funcione como carta de presentación profesional digital, que facilite la consulta rápida y atractiva de mi perfil, experiencia y formación.
 
-👀 Puedes ver la versión en línea aquí:
+👀 Puedes ver la versión en línea aquí: https://river0e.github.io/portfolio_presentacion_MJ_Castro/
