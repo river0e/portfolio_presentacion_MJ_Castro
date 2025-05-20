@@ -1,0 +1,239 @@
+body {
+  font-family: "EB Garamond", serif;
+  background-color: #f9f9f6; /* color papel claro */
+  background-image: linear-gradient(to right, #d6d6d6 1px, transparent 1px),
+    linear-gradient(to bottom, #d6d6d6 1px, transparent 1px);
+  background-size: 20px 20px; /* tamaño de cuadricula */
+  color: #000; /* texto negro puro */
+  margin: 0;
+  padding: 2rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* Títulos estilo máquina de escribir clásica en escala de grises */
+h1,
+h2,
+h3 {
+  font-family: "Special Elite", monospace;
+  color: #222; /* negro muy oscuro */
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+/* Estilo principal del h1 */
+h1 {
+  font-size: 3rem;
+  border-bottom: 2px solid #555; /* línea gris oscura */
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Enlaces estilo neutro gris */
+a {
+  color: #333; /* gris oscuro */
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+  border-color: #555;
+  color: #000;
+}
+
+/* Secciones con separadores de puntos en gris */
+section {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px dotted #666;
+}
+
+section::after {
+  content: "• • •";
+  position: absolute;
+  bottom: -1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #666;
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  font-weight: 700;
+  font-family: "Special Elite", monospace;
+  user-select: none;
+}
+
+/* Footer estilo cursiva y clásico en gris */
+footer {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 3rem;
+}
+
+header {
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  justify-content: space-between; /* espacio entre h1 y foto */
+  padding: 1rem 0;
+  border-bottom: 2px solid #444;
+}
+
+/* h1 a la izquierda */
+header h1 {
+  font-family: "Special Elite", monospace;
+  color: #222;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin: 0;
+  max-width: 70%; /* para que no ocupe todo y deje espacio a la foto */
+}
+
+/* Foto rectangular tipo fotomatón, sin borde redondeado */
+.foto-sepia {
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.2) brightness(0.95);
+  border: 2px solid #444; /* borde gris oscuro */
+  box-shadow: 0 0 2px #888;
+  background-color: #f9f9f6;
+  margin-left: 2rem;
+}
+
+/* Contenedor para los botones debajo del h1 */
+.botones-cv {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Botones estilo retro en rojo */
+#followBtn,
+#extraBtn {
+  font-size: 18px;
+  color: white;
+  background-color: #d32f2f;
+  border-radius: 8px;
+  padding: 12px 20px;
+  box-shadow: 0 0 8px #b71c1c;
+  user-select: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-family: "Special Elite", monospace;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#followBtn:hover,
+#extraBtn:hover {
+  background-color: #b71c1c;
+  box-shadow: 0 0 15px #f44336;
+}
+
+#followBtn i,
+#extraBtn i {
+  pointer-events: none;
+  font-size: 20px;
+}
+
+/* Estilo contenedor texto y botones */
+.encabezado-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 70%;
+}
+
+.exit-panel {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f9f9f6;
+  border: 2px dashed #444;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  z-index: 9999;
+  text-align: center;
+  font-family: 'Special Elite', monospace;
+}
+
+.exit-panel p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.exit-panel .botones-cv {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.exit-panel a {
+  font-size: 18px;
+  color: white;
+  background-color: #d32f2f;
+  border-radius: 8px;
+  padding: 12px 20px;
+  box-shadow: 0 0 8px #b71c1c;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exit-panel a:hover {
+  background-color: #b71c1c;
+  box-shadow: 0 0 15px #f44336;
+}
+
+.exit-panel i {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header h1,
+  .encabezado-texto {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .foto-sepia {
+    margin: 1rem 0 0 0;
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+  }
+
+  .botones-cv {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .exit-panel {
+    width: 90%;
+    left: 5%;
+    transform: none;
+    top: 20%;
+  }
+}
